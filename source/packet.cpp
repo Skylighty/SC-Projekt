@@ -13,3 +13,7 @@ Packet::Packet(unsigned int pid, unsigned int txid)
   ack_ = false;             //Initially - packet hasn't been claimed by RX which can set it to true
   error_ = false;
 }
+
+Packet::~Packet()
+{
+}

@@ -1,29 +1,27 @@
 #include "rx.h"
 
-void RX::ClaimPacket(Channel* ch)
+RX::RX(int id)
 {
-  this->received_packet_ = ch->serviced_packet_;
-  ch->serviced_packet_ = nullptr;
-  this->received_packet_->received_ = true;
+  rx_id_ = id;
+  received_packet_ = nullptr;
+}
+
+RX::~RX()
+{
+}
+
+void RX::ClaimPacket(Channel* channel)
+{
+
 }
 
 void RX::CheckPacket()
 {
-  if (this->received_packet_->collision_ == false || this->received_packet_->error_ == false)
-  {
-    this->received_packet_->ack_ = true;
-  }
-  else
-  {
-    this->received_packet_->ack_ = false;
-    this->received_packet_->retransmission_ = true;
-  }
+
 }
 
-void RX::SendBack(Channel* ch)
+void RX::SendBack(Channel* channel)
 {
-  ch->serviced_packet_ = this->received_packet_;
-  this->received_packet_ = nullptr;
 
 }
 

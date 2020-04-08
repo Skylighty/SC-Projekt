@@ -144,6 +144,7 @@
     <ClCompile Include="..\source\process_interaction.cpp" />
     <ClCompile Include="..\source\rx.cpp" />
     <ClCompile Include="..\source\tx.cpp" />
+    <ClCompile Include="..\source\wireless_network.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\source\channel.h" />
@@ -151,6 +152,7 @@
     <ClInclude Include="..\source\process.h" />
     <ClInclude Include="..\source\rx.h" />
     <ClInclude Include="..\source\tx.h" />
+    <ClInclude Include="..\source\wireless_network.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

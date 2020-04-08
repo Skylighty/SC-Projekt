@@ -3,5 +3,5 @@
 Channel::Channel()
 {
   busy_ = false;
-  serviced_packet_ = nullptr;
+  packets_in_channel_ = {};
 }
